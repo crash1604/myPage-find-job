@@ -1,4 +1,5 @@
 <html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -14,7 +15,6 @@ color:#014a8e;
 
 }
 .job{
-
 	align:center;
 	box-shadow: 0 8px 6px -6px black;
 	width:70%;
@@ -107,12 +107,15 @@ float:right;
   background-color: #003366;
 }
 </style>
+<title></title>
+</head>
+
 <body>
 <div>
 <ul>
 <li><h1>MyPage</h1></li>
 		<div style="float:right">
-<a href="#" class="fa fa-facebook"></a>
+<a href="" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
 <a href="#" class="fa fa-google"></a>
 <a href="#" class="fa fa-linkedin"></a>
@@ -126,43 +129,12 @@ float:right;
   <a href="contactus.php"><i class="fa fa-envelope"></i></a> 
   <a href="Aboutus.php"><i class="fa fa-globe"></i></a>
   <a href="registrationform.php"><i class="fa fa-file"></i></a> 
-  <a href="userdetails.php"><i class="fa fa-user"></i></a> 
+  <a href="userdetails.php"><i class="fa fa-user"></i></a>
 </div>
 <div>
-<?php
-	$x="bus.gif";
-	echo "<div align=\"center\">
-	<h2 style=\"color:#003366;font-family:Verdana;\">Find your jobs here</h2>
-	<div class=\"job\">
-		<img src=\"".$x. "\" alt=\"profile\">
-		<p>random jobs are posted here go ahead and add everything you wish to.</p>
-		<button>ApplyNow</button>
-	</div>
-	<br>
-	<div class=\"job\">
-		<img src=\"".$x. "\" alt=\"profile\">
-		<p>random jobs are posted here go ahead and add everything you wish to.</p>
-		<button>ApplyNow</button>
-	</div>
-	<br>
-	<div class=\"job\">
-		<img src=\"".$x. "\" alt=\"profile\">
-		<p>random jobs are posted here go ahead and add everything you wish to.</p>
-		<button>ApplyNow</button>
-	</div>
-	<br>
-	<div class=\"job\">
-		<img src=\"".$x. "\" alt=\"profile\">
-		<p>random jobs are posted here go ahead and add everything you wish to.</p>
-		<button>ApplyNow</button>
-	</div>
-	<br>
-	</div>";
 	
-
-
-?>
 </div>
+
 
 	</body>
 </html>
