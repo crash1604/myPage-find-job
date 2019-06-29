@@ -10,8 +10,14 @@ h1{	font-family:verdana;
 	overflow:auto;
 	}
 	
+select,option{
+color:#014a8e;
+border:none;
+}
 p{
 color:#014a8e;
+font-family:Verdana;
+font-size:14px;
 
 }
 .job{
@@ -56,6 +62,23 @@ body {margin:0;}
   background: #007bb5;
   color: white;
 }
+.form{
+	padding:100px;
+	align:center;
+	box-shadow: 0 8px 6px -6px black;
+	width:70%;
+	border: 1px;
+}
+ input[type=submit]{
+  background-color: #003366;
+  border: none;
+  font-family:Verdana;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+ }
 .icon-bar {
   width: 100%;
   background-color: #003366;
@@ -75,13 +98,18 @@ ul {
   padding: 12px 0;
   transition: all 0.3s ease;
   color: white;
-  font-size: 36px;
+  font-size: 16px;
 }
 
 li {
   float: left;
 }
-
+.nb{
+text-decoration:none;
+color:white;
+font-size:10px;
+font-family:Verdana;
+}
 img
 {
 	float:left;
@@ -106,6 +134,11 @@ float:right;
 .active {
   background-color: #003366;
 }
+
+.form1 {	align:center;
+	box-shadow: 0 8px 6px -6px black;
+	width:70%;
+}
 </style>
 <title></title>
 </head>
@@ -124,15 +157,39 @@ float:right;
 </ul>
 </div>
 <div class="icon-bar">
-  <a class="active" href="index.php"><i class="fa fa-home"></i></a> 
-  <a href="#"><i class="fa fa-search"></i></a> 
-  <a href="contactus.php"><i class="fa fa-envelope"></i></a> 
-  <a href="Aboutus.php"><i class="fa fa-globe"></i></a>
-  <a href="registrationform.php"><i class="fa fa-file"></i></a> 
-  <a href="userdetails.php"><i class="fa fa-user"></i></a>
+
+  <a href="index.php" class="nb">Home</a> 
+  <a href="#" class=" nb dropbtn">search</a> 
+  <a href="contactus.php" class=" nb dropbtn">Contact Us</a> 
+  <a href="Aboutus.php" class=" nb dropbtn">About Us</a>
+  <a href="registrationform.php" class=" nb dropbtn">Event Registration</a>
+  <a href="userdetails.php" class="nb dropbtn">Your Profile</a> 
+
 </div>
-<div>
-	
+
+<div class="form" style="border:thin">
+	<div style="float: right;">
+<img src="bus.gif" alt="a friendly image">
+	</div>
+	  <form action="/contactreq.php"><br>
+    <p>First Name</p>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+
+    <p>Last Name</p>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+
+    <p>Country</p>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select><br>
+
+    <p>Subject Followed By Query</p>
+   <textarea name="textarea" cols="50" rows="4" id="subject" name="subject" placeholder="Write something.." ></textarea><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
 </div>
 
 

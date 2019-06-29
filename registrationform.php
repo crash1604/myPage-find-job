@@ -10,6 +10,17 @@ h1{	font-family:verdana;
 	overflow:auto;
 	}
 	
+	
+	 input[type=submit]{
+  background-color: #003366;
+  border: none;
+  font-family:Verdana;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+ }
 p{
 color:#014a8e;
 font-family:Verdana;
@@ -78,13 +89,18 @@ ul {
   padding: 12px 0;
   transition: all 0.3s ease;
   color: white;
-  font-size: 36px;
+  font-size: 16px;
 }
 
 li {
   float: left;
 }
-
+.nb{
+text-decoration:none;
+color:white;
+font-size:10px;
+font-family:Verdana;
+}
 img
 {
 	float:left;
@@ -131,12 +147,14 @@ float:right;
 </ul>
 </div>
 <div class="icon-bar">
- <a class="active" href="index.php"><i class="fa fa-home"></i></a> 
-  <a href="#"><i class="fa fa-search"></i></a> 
-  <a href="contactus.php"><i class="fa fa-envelope"></i></a> 
-  <a href="Aboutus.php"><i class="fa fa-globe"></i></a>
-  <a href="registrationform.php"><i class="fa fa-file"></i></a> 
-  <a href="userdetails.php"><i class="fa fa-user"></i></a>
+
+  <a href="index.php" class="nb">Home</a> 
+  <a href="#" class=" nb dropbtn">search</a> 
+  <a href="contactus.php" class=" nb dropbtn">Contact Us</a> 
+  <a href="Aboutus.php" class=" nb dropbtn">About Us</a>
+  <a href="registrationform.php" class=" nb dropbtn">Event Registration</a>
+  <a href="userdetails.php" class="nb dropbtn">Your Profile</a> 
+
 </div>
 <div class="form" style="border:thin">
 	<br>
@@ -150,9 +168,16 @@ float:right;
 	<p>Contact details</p>
 	<input type="number">
 	<br>
+	<p>Event Applying For</p>
+	<select>
+	<option value="coding">coding event</option>
+	<option value="development">website development</option>
+	</select>
+	<br>
 	<p>Applying as(Please include your skills aswell):</p>
     <textarea name="textarea" cols="50" rows="4">
-	</textarea>
+	</textarea><br><br>
+	<input type="submit" value="Submit">
 	</form>
 
 </div>

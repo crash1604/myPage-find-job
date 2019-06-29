@@ -1,0 +1,33 @@
+<?php
+	$x="bus.gif";
+	echo "<div align=\"center\">
+	<h2 style=\"color:#003366;font-family:Verdana;\">Find your jobs here</h2>
+	<div class=\"job\">
+		<img src=\"".$x. "\" alt=\"profile\">
+		<p>random jobs are posted here go ahead and add everything you wish to.</p>
+		<button>ApplyNow</button>
+	</div>
+	<br>
+	<div class=\"job\">
+		<img src=\"".$x. "\" alt=\"profile\">
+		<p>random jobs are posted here go ahead and add everything you wish to.</p>
+		<button>ApplyNow</button>
+	</div>
+	<br>
+	<div class=\"job\">
+		<img src=\"".$x. "\" alt=\"profile\">
+		<p>random jobs are posted here go ahead and add everything you wish to.</p>
+		<button>ApplyNow</button>
+	</div>
+	<br>
+	<div class=\"job\">
+		<img src=\"".$x. "\" alt=\"profile\">
+		<p>random jobs are posted here go ahead and add everything you wish to.</p>
+		<button>ApplyNow</button>
+	</div>
+	<br>
+	</div>";
+	
+
+
+?>

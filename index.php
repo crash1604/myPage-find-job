@@ -4,6 +4,11 @@
 
 
 <style>
+
+
+
+
+
 h1{	font-family:verdana;
 	color: #003366;
 	overflow:auto;
@@ -25,7 +30,7 @@ body {margin:0;}
 #im{float:right;}
 .fa {
   padding: 5px;
-  font-size: 30px;
+  font-size: 15px;
   width: 30px;
   text-align: center;
   text-decoration: none;
@@ -75,7 +80,7 @@ ul {
   padding: 12px 0;
   transition: all 0.3s ease;
   color: white;
-  font-size: 36px;
+  font-size: 16px;
 }
 
 li {
@@ -103,9 +108,18 @@ font-family:verdana;
 font-size:20px;
 float:right;
 }
-.active {
-  background-color: #003366;
+
+.nb{
+text-decoration:none;
+color:white;
+font-size:10px;
+font-family:Verdana;
 }
+
+
+
+
+
 </style>
 <body>
 <div>
@@ -121,44 +135,58 @@ float:right;
 </ul>
 </div>
 <div class="icon-bar">
-  <a class="active" href="index.php"><i class="fa fa-home"></i></a> 
-  <a href="#"><i class="fa fa-search"></i></a> 
-  <a href="contactus.php"><i class="fa fa-envelope"></i></a> 
-  <a href="Aboutus.php"><i class="fa fa-globe"></i></a>
-  <a href="registrationform.php"><i class="fa fa-file"></i></a> 
-  <a href="userdetails.php"><i class="fa fa-user"></i></a> 
+
+  <a href="index.php" class="nb">Home</a> 
+  <a href="#" class=" nb dropbtn">search</a> 
+  <a href="contactus.php" class=" nb dropbtn">Contact Us</a> 
+  <a href="Aboutus.php" class=" nb dropbtn">About Us</a>
+  <a href="registrationform.php" class=" nb dropbtn">Event Registration</a>
+  <a href="userdetails.php" class="nb dropbtn">Your Profile</a> 
+
 </div>
 <div>
 <?php
-	$x="bus.gif";
-	echo "<div align=\"center\">
-	<h2 style=\"color:#003366;font-family:Verdana;\">Find your jobs here</h2>
-	<div class=\"job\">
-		<img src=\"".$x. "\" alt=\"profile\">
-		<p>random jobs are posted here go ahead and add everything you wish to.</p>
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mypage";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT id, title, details_p, img_src, tags FROM jobs_div";
+$result = $conn->query($sql);
+
+echo "<div align=\"center\">
+	<h2 style=\"color:#003366;font-family:Verdana;\">Find your jobs here</h2>";
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+	$title=$row["title"];
+	$details=$row["details_p"];
+	$source=$row["img_src"];
+	$tag=$row["tags"];
+
+
+	echo "<div class=\"job\">
+		<img src=\"uploads/".$source. "\" alt=\"profile\"><h4> ".$title."</h4>
+		<p>".$details."</p>
 		<button>ApplyNow</button>
-	</div>
-	<br>
-	<div class=\"job\">
-		<img src=\"".$x. "\" alt=\"profile\">
-		<p>random jobs are posted here go ahead and add everything you wish to.</p>
-		<button>ApplyNow</button>
-	</div>
-	<br>
-	<div class=\"job\">
-		<img src=\"".$x. "\" alt=\"profile\">
-		<p>random jobs are posted here go ahead and add everything you wish to.</p>
-		<button>ApplyNow</button>
-	</div>
-	<br>
-	<div class=\"job\">
-		<img src=\"".$x. "\" alt=\"profile\">
-		<p>random jobs are posted here go ahead and add everything you wish to.</p>
-		<button>ApplyNow</button>
-	</div>
-	<br>
-	</div>";
-	
+	</div><br>";        
+		
+		
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+
+
+echo "</div>"
 
 
 ?>
