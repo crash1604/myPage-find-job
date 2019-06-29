@@ -1,10 +1,14 @@
 <html>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <style>
+
+
+
+
+
 h1{	font-family:verdana;
 	color: #003366;
 	overflow:auto;
@@ -15,6 +19,7 @@ color:#014a8e;
 
 }
 .job{
+
 	align:center;
 	box-shadow: 0 8px 6px -6px black;
 	width:70%;
@@ -25,7 +30,7 @@ body {margin:0;}
 #im{float:right;}
 .fa {
   padding: 5px;
-  font-size: 30px;
+  font-size: 15px;
   width: 30px;
   text-align: center;
   text-decoration: none;
@@ -93,13 +98,6 @@ img
 .icon-bar a:hover {
   background-color: #003366;
 }
-
-.nb{
-text-decoration:none;
-color:white;
-font-size:10px;
-font-family:Verdana;
-}
 button{
 background-color:#003366;
 color:white;
@@ -110,19 +108,47 @@ font-family:verdana;
 font-size:20px;
 float:right;
 }
-.active {
-  background-color: #003366;
-}
-</style>
-<title></title>
-</head>
 
+.nb{
+text-decoration:none;
+color:white;
+font-size:10px;
+font-family:Verdana;
+}
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+
+.box__button{
+background-color:#003366;
+color:white;
+border:none;
+width:130px;
+height:35px;
+font-family:verdana;
+font-size:20px;
+}
+.box__input{
+background-color:#003366;
+color:white;
+height:100px;
+width:250px;
+padding:100px;
+opacity:0.99;
+}
+
+
+</style>
 <body>
 <div>
 <ul>
 <li><h1>MyPage</h1></li>
 		<div style="float:right">
-<a href="" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
 <a href="#" class="fa fa-google"></a>
 <a href="#" class="fa fa-linkedin"></a>
@@ -140,9 +166,37 @@ float:right;
   <a href="userdetails.php" class="nb dropbtn">Your Profile</a> 
 
 </div>
-	
+
+
+<div style="border:thin;border-color:#003366;">
+<center><h2 style="color:#003366;font-family:Verdana;">Post Your Jobs here</h2></center>
+	<div class=form>
+	<center>
+	<form class="box" method="post" action="postdb.php" enctype="multipart/form-data">
+	<p>Title of the job</p>
+	<input type="text" name="title"><br>
+	<p>details of the job</p>
+	<textarea name="details" cols="70" rows="6">Tell us more about the job....</textarea>
+	<br><br>
+  <div class="box__input">
+    <input class="box__file" type="file" name="file">
+    <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
+	<br>
+   
+  </div>
+  <div class="box__uploading">Uploading&hellip;</div>
+  <div class="box__success">Done!</div>
+  <div class="box__error">Error! <span></span>.</div>
+<p>please include tags</p>
+
+<input type="text" name="tags">
+
+<br>
+<br>
+ <button type="submit" class="box__button" name="submit">Submit</button>
+</form>
+	</center>
+	</div>
+
+
 </div>
-
-
-	</body>
-</html>

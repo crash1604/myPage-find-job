@@ -8,10 +8,13 @@
 h1{	font-family:verdana;
 	color: #003366;
 	overflow:auto;
+	font-size:34px;
 	}
 	
 p{
 color:#014a8e;
+font-size:24px;
+font-family:verdana;
 
 }
 .job{
@@ -75,7 +78,7 @@ ul {
   padding: 12px 0;
   transition: all 0.3s ease;
   color: white;
-  font-size: 36px;
+  font-size: 16px;
 }
 
 li {
@@ -106,6 +109,16 @@ float:right;
 .active {
   background-color: #003366;
 }
+
+.nb{
+text-decoration:none;
+color:white;
+font-size:10px;
+font-family:Verdana;
+}
+
+
+
 </style>
 <title></title>
 </head>
@@ -124,17 +137,27 @@ float:right;
 </ul>
 </div>
 <div class="icon-bar">
-  <a class="active" href="index.php"><i class="fa fa-home"></i></a> 
-  <a href="#"><i class="fa fa-search"></i></a> 
-  <a href="contactus.php"><i class="fa fa-envelope"></i></a> 
-  <a href="Aboutus.php"><i class="fa fa-globe"></i></a>
-  <a href="registrationform.php"><i class="fa fa-file"></i></a> 
-  <a href="userdetails.php"><i class="fa fa-user"></i></a>
-</div>
-<div>
-	
-</div>
 
+  <a href="index.php" class="nb">Home</a> 
+  <a href="#" class=" nb dropbtn">search</a> 
+  <a href="contactus.php" class=" nb dropbtn">Contact Us</a> 
+  <a href="Aboutus.php" class=" nb dropbtn">About Us</a>
+  <a href="registrationform.php" class=" nb dropbtn">Event Registration</a>
+  <a href="userdetails.php" class="nb dropbtn">Your Profile</a> 
 
+</div>
+</div>
+<div style="padding:25px;">
+	<h1 style="size:36px;">About Us</h1>
+	<p style="size:22px;">lorem ipsum lorem lorem ipsusm susuininet tabdu ajkf</p>
+</div>
+<div style="padding:25px;">
+	<h1 style="size:36px;">What We Do</h1>
+	<p style="size:22px;">lorem ipsum lorem lorem ipsusm susuininet tabdu ajkf</p>
+</div>
+<div style="padding:25px;">
+	<h1 style="size:36px;">Our Vision</h1>
+	<p style="size:22px;">lorem ipsum lorem lorem ipsusm susuininet tabdu ajkf</p>
+</div>
 	</body>
 </html>
